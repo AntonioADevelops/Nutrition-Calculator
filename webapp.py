@@ -7,9 +7,9 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template("home.html")
 
-@app.route("/calc")
+@app.route("/calculator")
 def render_calc():
-    return render_template("calc.html")
+    return render_template("calculator.html")
 
 if __name__=="__main__":
     app.run(debug=False)
