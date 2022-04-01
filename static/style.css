@@ -1,8 +1,32 @@
-body {
-    text-align: center;
-}
 .text {
+    text-align: center;
     margin-top: 2em;
     margin-left: 15em;
     margin-right: 15em;
+}
+.facts {
+    border: 2px solid #000;
+}
+.label {
+    border-bottom: 0.5em solid #000;
+}
+.left {
+    text-align: left;
+    justify-content: left;
+}
+.right {
+    text-align: right;
+    justify-content: right;
+}
+#hide {
+    visibility: hidden;
+}
+#dv {
+    font-size: smaller;
+}
+.nutrient {
+    font-weight: 600;
+}
+.tranfat {
+    border-top: 1px solid #000;
 }
