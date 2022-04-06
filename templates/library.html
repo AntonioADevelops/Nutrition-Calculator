@@ -8,67 +8,87 @@
 <div class="text">
   <h1>Search for an ingredient to see it's nutritional value</h1>
 </div>
-<div class="facts">
-  <h3 class="label">Nutritional Facts</h3>
+<div class="label">
+  <h3 class="title">Nutrition Facts</h3>
   <table>
     <thead>
       <tr>
-        <th id="hide">Nutrients</th>
-        <th id="dv">% Daily Value*</th>
+        <th id="aps">Amount Per Serving</th>
+      </tr>
+      <tr>
+        <th class="left" id="cal"><span class="nutrient">Calories</span> 200</th>
+        <th class="right" id="cal">Calories from Fat</span> 130</th>
+      </tr>
+      <tr>
+        <th class="left" id="hide">Nutrients</th>
+        <th class="right"id="dv">% Daily Value*</th>
       </tr>
       <div class="fat">
         <tr>
           <td class="left"><span class="nutrient">Total Fat</span> 14g</td>
-          <td class="right" class="daily">22%</td>
+          <td class="right" class="daily" >22%</td>
           <div class="satfat">
             <tr>
-              <td class="left">Saturated Fats</span> 9g</td>
-              <td class="right" class="daily">22%</td>
+              <td class="left">&emsp;Saturated Fats</span> 9g</td>
+              <td class="right" class="daily" >22%</td>
             </tr>
           </div>
           <tr>
-            <td class="left" id="trans">Trans Fats</span> 0g</td>
-            <td class="right" id="trans"class="daily">0%</td>
+            <td class="left">&emsp;Trans Fats</span> 0g</td>
+            <td class="right" class="daily">0%</td>
           </tr>
         </tr>
       </div>
       <div class="cholesterol">
         <tr>
           <td class="left"><span class="nutrient">Cholesterol</span> 55mg</td>
-          <td class="right" class="daily">18%</td>
+          <td class="right" class="daily" >18%</td>
         </tr>
       </div>
       <div class="sodium">
         <tr>
           <td class="left"><span class="nutrient">Sodium</span> 40mg</td>
-          <td class="right" class="daily">2%</td>
+          <td class="right" class="daily" >2%</td>
         </tr>
       </div>
       <div class="carbs">
         <tr>
           <td class="left"><span class="nutrient">Total Carbohydrate</span> 17g</td>
-          <td class="right" class="daily">6%</td>
+          <td class="right" class="daily" >6%</td>
           <div class="fiber">
             <tr>
-              <td class="left">Dietary Fiber 1g</td>
-              <td class="right" class="daily">4%</td>
+              <td class="left">&emsp;Dietary Fiber 1g</td>
+              <td class="right" class="daily" >4%</td>
             </tr>
           </div>
           <div class="sugar">
             <tr>
-              <td class="left">sugars 14g</td>
-              <td class="right" class="daily">0%</td>
+              <td class="left">&emsp;Sugars 14g</td>
+              <td class="right" class="daily" >0%</td>
             </tr>
           </div>
         </tr>
       </div>
       <div class="protein">
         <tr>
-          <td class="left"><span class="nutrient">Protein 3g</span></td>
-          <td class="right" class="daily">0%</td>
+          <td class="left" id="botbreak"><span class="nutrient">Protein 3g</span></td>
+          <td class="right" class="daily" id="botbreak">0%</td>
+        </tr>
+      </div>
+      <div class="vit">
+        <tr>
+          <td class="left"><span>Vitamin A</span> 10%</td>
+          <td class="left"><span>&bull;Vitamin C</span> 0%</td>
+        </tr>
+        <tr>
+          <td class="left"><span>Calcium</span> 10%</td>
+          <td class="left"><span>&bull;Iron</span> 6%</td>
         </tr>
       </div>
     </thead>
-  </table>   
+  </table> 
+  <p id="dvex">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+  <p id="dvex">Calories per gram Fat 9 • Carbohydrate 4 • Protein 4</p>
+
 </div><br>
 {% endblock %}

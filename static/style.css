@@ -4,29 +4,56 @@
     margin-left: 15em;
     margin-right: 15em;
 }
-.facts {
-    border: 2px solid #000;
-}
 .label {
-    border-bottom: 0.5em solid #000;
+    border: 1px solid #000;
+    width: fit-content;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#aps {
+    font-size: smaller;
+    text-align: left;
+    justify-content: left;
+    font-weight: 400;
+}
+#cal {
+    font-weight: 400;
+}
+
+.title{
+    font-weight: 700;
+    border-bottom: 0.45em solid #000;
+    padding-bottom: 5px;
 }
 .left {
     text-align: left;
     justify-content: left;
+    border-top: 1px solid #000;
 }
 .right {
     text-align: right;
     justify-content: right;
+    border-top: 1px solid #000;
 }
 #hide {
+    border-top: 0.5em solid #000;
+    font-size: smaller;
     visibility: hidden;
 }
 #dv {
+    border-top: 0.5em solid #000;
     font-size: smaller;
 }
 .nutrient {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
-.tranfat {
+#botbreak {
+    border-bottom: 0.8em solid #000;
+}
+#dvex {
     border-top: 1px solid #000;
+    max-width: fit-content;
+    text-align: left;
+    font-size: 0.8em;
 }
