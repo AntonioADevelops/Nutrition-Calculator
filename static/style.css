@@ -34,20 +34,10 @@ html {
     justify-content: left;
     border-top: 1px solid #000;
 }
-.left2 {
-    justify-content: left;
-    text-align: left;
-    font-size: 0.8em;
-}
 .right {
     text-align: right;
     justify-content: right;
     border-top: 1px solid #000;
-}
-.right2 {
-    justify-content: left;
-    text-align: left;
-    font-size: 0.8em;
 }
 
 #hide {
@@ -97,4 +87,9 @@ html {
 #topline {
     
     border-top: 1px solid #000;
+}
+.recval {
+    justify-content: left;
+    text-align: left;
+    font-size: 0.8em;
 }
