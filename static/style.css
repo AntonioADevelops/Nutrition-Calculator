@@ -1,3 +1,6 @@
+html {
+    text-size-adjust: 100%;
+}
 .text {
     text-align: center;
     margin-top: 2em;
@@ -31,22 +34,37 @@
     justify-content: left;
     border-top: 1px solid #000;
 }
+.left2 {
+    justify-content: left;
+    text-align: left;
+    font-size: 0.8em;
+}
 .right {
     text-align: right;
     justify-content: right;
     border-top: 1px solid #000;
 }
+.right2 {
+    justify-content: left;
+    text-align: left;
+    font-size: 0.8em;
+}
+
 #hide {
     border-top: 0.5em solid #000;
     font-size: smaller;
     visibility: hidden;
+}
+#hide2 {
+    font-size: 0.8em;
+    visibility: hidden !important;
 }
 #dv {
     border-top: 0.5em solid #000;
     font-size: smaller;
 }
 .nutrient {
-    font-weight: 600 !important;
+    font-weight: 750 !important;
 }
 #botbreak {
     border-bottom: 0.8em solid #000;
@@ -54,6 +72,29 @@
 #dvex {
     border-top: 1px solid #000;
     max-width: fit-content;
+    justify-content: left;
     text-align: left;
     font-size: 0.8em;
+    margin: 0;
+}
+
+#dvex2 {
+    border-top: 1px solid #000;
+    text-align: left;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+#dvex3 {
+    padding: 0;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 0;
+}
+#average {
+    width: 100%;
+}
+#topline {
+    
+    border-top: 1px solid #000;
 }
