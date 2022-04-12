@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% set active_page = "" %}
+
+{% block title %} Output {% endblock %}
+
+{% block content %}
+<div class="label">
+  <h3 class="title">Nutrition Facts</h3>
+  <table>
+    <thead>
+      <tr>
+        <td id="aps">Amount Per Serving</td>
+      </tr>
+      <tr>
+        <th class="left" id="cal"><span class="nutrient">Calories</span> {{ Calories }}</th>
+        <th class="right" id="cal"><span>Calories from Fat</span> {{ FatCalories }}</th>
+      </tr>
+      <tr>
+        <th class="left" id="hide">Nutrients</th>
+        <th class="right"id="dv">% Daily Value*</th>
+      </tr>
+      <div class="fat">
+        <tr>
+          <td class="left"><span class="nutrient">Total Fat</span> {{ Fat }}g</td>
+          <td class="right">{{ FatDv }}%</td>
+          <div class="satfat">
+            <tr>
+              <td class="left"><span>&emsp;Saturated Fats</span> {{ SatFat }}g</td>
+              <td class="right">{{ SatFatDv }}%</td>
+            </tr>
+          </div>
+        </tr>
+      </div>
+      <div class="cholesterol">
+        <tr>
+          <td class="left"><span class="nutrient">Cholesterol</span> {{ Chole }}mg</td>
+          <td class="right">{{ CholeDv }}%</td>
+        </tr>
+      </div>
+      <div class="sodium">
+        <tr>
+          <td class="left"><span class="nutrient">Sodium</span> {{ Sodium }}mg</td>
+          <td class="right">{{ SodiumDv }}%</td>
+        </tr>
+      </div>
+      <div class="carbs">
+        <tr>
+          <td class="left"><span class="nutrient">Total Carbohydrate</span> {{ Carbs }}g</td>
+          <td class="right">{{ CarbsDv }}%</td>
+          <div class="fiber">
+            <tr>
+              <td class="left"><span>&emsp;Dietary Fiber</span> {{ Fiber }}g</td>
+              <td class="right">{{ FiberDv }}%</td>
+            </tr>
+          </div>
+          <div class="sugar">
+            <tr>
+              <td class="left"><span>&emsp;Sugars</span> {{ Sugar }}g</td>
+              <td class="right">{{ SugarDv }}</td>
+            </tr>
+          </div>
+        </tr>
+      </div>
+      <div class="protein">
+        <tr>
+          <td class="left" id="botline"><span class="nutrient">Protein</span> {{ Protein }}g</td>
+          <td class="right" class="daily" id="botline">{{ ProteinDV }}</td>
+        </tr>
+      </div>
+      <div class="vit">
+        <tr>
+          <td class="left"><span>Vitamin A</span> {{ VitA }}%</td>
+          <td class="left"><span>&bull;Vitamin C</span> {{ VitC }}%</td>
+        </tr>
+        <tr>
+          <td class="left"><span>Calcium</span> {{ Calcium }}%</td>
+          <td class="left"><span>&bull;Iron</span> {{ Iron }}%</td>
+        </tr>
+      </div>
+    </thead>
+  </table> 
+  <p id="dvex">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+  <table id="average">
+    <thead>
+      <tr>
+        <td class="recval" id="hide2">hidden</td>
+        <td class="recval">Calories:</td>
+        <td class="recval">2,000</td>
+        <td class="recval">2,500s</td>
+      </tr>
+      <tr id="topline">
+        <td class="recval">Total Fat</td>
+        <td class="recval">Less Than</td>
+        <td class="recval">65g</td>
+        <td class="recval">80g</td>
+      </tr>
+      <tr>
+        <td class="recval">&emsp;Saturated Fat</td>
+        <td class="recval">Less Than</td>
+        <td class="recval">20g</td>
+        <td class="recval">25g</td>
+      </tr>
+      <tr>
+        <td class="recval">Cholesterol</td>
+        <td class="recval">Less Than</td>
+        <td class="recval">300mg</td>
+        <td class="recval">300 mg</td>
+      </tr>
+      <tr>
+        <td class="recval">Sodium</td>
+        <td class="recval">Less Than</td>
+        <td class="recval">2,400mg</td>
+        <td class="recval">2,400mg</td>
+      </tr>
+      <tr>
+        <td class="recval">Total Carbohydrate</td>
+        <td class="recval" id="hide2">Less Than</td>
+        <td class="recval">300g</td>
+        <td class="recval">375g</td>
+      </tr>
+      <tr>
+        <td class="recval">&emsp;Dietary Fiber</td>
+        <td class="recval" id="hide2">Less Than</td>
+        <td class="recval">25g</td>
+        <td class="recval">30g</td>
+      </tr>
+    </thead>
+  </table>
+  <p id="dvex2">Calories per gram:</p>
+  <p id="dvex3">Fat 9 • Carbohydrate 4 • Protein 4</p>
+</div><br>
+{% endblock %}

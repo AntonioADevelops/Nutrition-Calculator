@@ -8,11 +8,11 @@ html {
     margin-right: 15em;
 }
 .label {
+    /* visibility: hidden; */
     border: 1px solid #000;
     width: fit-content;
     padding: 12px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 #aps {
     font-size: smaller;
@@ -56,7 +56,7 @@ html {
 .nutrient {
     font-weight: 750 !important;
 }
-#botbreak {
+#botline {
     border-bottom: 0.8em solid #000;
 }
 #dvex {
