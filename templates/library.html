@@ -8,133 +8,16 @@
 <div class="text">
   <h1>Search for an ingredient to see it's nutritional value</h1>
 </div>
-<div class="label">
-  <h3 class="title">Nutrition Facts</h3>
-  <table>
-    <thead>
-      <tr>
-        <td id="aps">Amount Per Serving</td>
-      </tr>
-      <tr>
-        <th class="left" id="cal"><span class="nutrient">Calories</span> 200</th>
-        <th class="right" id="cal"><span>Calories from Fat</span> 130</th>
-      </tr>
-      <tr>
-        <th class="left" id="hide">Nutrients</th>
-        <th class="right"id="dv">% Daily Value*</th>
-      </tr>
-      <div class="fat">
-        <tr>
-          <td class="left"><span class="nutrient">Total Fat</span> 14g</td>
-          <td class="right">22%</td>
-          <div class="satfat">
-            <tr>
-              <td class="left">&emsp;Saturated Fats</span> 9g</td>
-              <td class="right">22%</td>
-            </tr>
-          </div>
-          <tr>
-            <td class="left">&emsp;Trans Fats</span> 0g</td>
-            <td class="right">0%</td>
-          </tr>
-        </tr>
-      </div>
-      <div class="cholesterol">
-        <tr>
-          <td class="left"><span class="nutrient">Cholesterol</span> 55mg</td>
-          <td class="right">18%</td>
-        </tr>
-      </div>
-      <div class="sodium">
-        <tr>
-          <td class="left"><span class="nutrient">Sodium</span> 40mg</td>
-          <td class="right">2%</td>
-        </tr>
-      </div>
-      <div class="carbs">
-        <tr>
-          <td class="left"><span class="nutrient">Total Carbohydrate</span> 17g</td>
-          <td class="right">6%</td>
-          <div class="fiber">
-            <tr>
-              <td class="left">&emsp;Dietary Fiber 1g</td>
-              <td class="right">4%</td>
-            </tr>
-          </div>
-          <div class="sugar">
-            <tr>
-              <td class="left">&emsp;Sugars 14g</td>
-              <td class="right">0%</td>
-            </tr>
-          </div>
-        </tr>
-      </div>
-      <div class="protein">
-        <tr>
-          <td class="left" id="botbreak"><span class="nutrient">Protein</span> 3g</td>
-          <td class="right" class="daily" id="botbreak">0%</td>
-        </tr>
-      </div>
-      <div class="vit">
-        <tr>
-          <td class="left"><span>Vitamin A</span> 10%</td>
-          <td class="left"><span>&bull;Vitamin C</span> 0%</td>
-        </tr>
-        <tr>
-          <td class="left"><span>Calcium</span> 10%</td>
-          <td class="left"><span>&bull;Iron</span> 6%</td>
-        </tr>
-      </div>
-    </thead>
-  </table> 
-  <p id="dvex">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
-  <table id="average">
-    <thead>
-      <tr>
-        <td class="recval" id="hide2">hidden</td>
-        <td class="recval">Calories:</td>
-        <td class="recval">2,000</td>
-        <td class="recval">2,500s</td>
-      </tr>
-      <tr id="topline">
-        <td class="recval">Total Fat</td>
-        <td class="recval">Less Than</td>
-        <td class="recval">65g</td>
-        <td class="recval">80g</td>
-      </tr>
-      <tr>
-        <td class="recval">&emsp;Saturated Fat</td>
-        <td class="recval">Less Than</td>
-        <td class="recval">20g</td>
-        <td class="recval">25g</td>
-      </tr>
-      <tr>
-        <td class="recval">Cholesterol</td>
-        <td class="recval">Less Than</td>
-        <td class="recval">300mg</td>
-        <td class="recval">300 mg</td>
-      </tr>
-      <tr>
-        <td class="recval">Sodium</td>
-        <td class="recval">Less Than</td>
-        <td class="recval">2,400mg</td>
-        <td class="recval">2,400mg</td>
-      </tr>
-      <tr>
-        <td class="recval">Total Carbohydrate</td>
-        <td class="recval" id="hide2">Less Than</td>
-        <td class="recval">300g</td>
-        <td class="recval">375g</td>
-      </tr>
-      <tr>
-        <td class="recval">&emsp;Dietary Fiber</td>
-        <td class="recval" id="hide2">Less Than</td>
-        <td class="recval">25g</td>
-        <td class="recval">30g</td>
-      </tr>
-    </thead>
-  </table>
-  <p id="dvex2">Calories per gram:</p>
-  <p id="dvex3">Fat 9 • Carbohydrate 4 • Protein 4</p>
-</div><br>
+<div class="form">
+  <form action="/form" i ="formID">
+    <fieldset>
+      <label for="ingredient">Select an Ingredient:</label><br>
+      <input class="ingredient" list="food" name="ingredient">
+      <datalist id="food">
+        {{ ingredients }}
+      </datalist>
+      <input type="submit" value="Calculate">
+    </fieldset>
+  </form>
+</div>
 {% endblock %}
