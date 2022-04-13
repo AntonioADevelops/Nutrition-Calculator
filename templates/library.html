@@ -12,11 +12,11 @@
   <form action="/form" i ="formID">
     <fieldset>
       <label for="ingredient">Select an Ingredient:</label><br>
-      <input class="ingredient" list="food" name="ingredient">
+      <input type="text" list="food" name="ingredient" onfocus="this.value=''">
       <datalist id="food">
         {{ ingredients }}
       </datalist>
-      <input type="submit" value="Calculate">
+      <input type="submit" value="Search">
     </fieldset>
   </form>
 </div>

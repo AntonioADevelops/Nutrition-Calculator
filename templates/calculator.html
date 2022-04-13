@@ -13,15 +13,16 @@
     <fieldset>
       <label for="ingredient">Select an Ingredient:</label>
       <label for="amount">&emsp;&emsp;&ensp;Select amount in Serving Size:</label><br>
-      <input class="ingredient" list="food" name="ingredient">
-      <input class="amount" name="amount">
+      <input class="ingredient" list="food" name="ingredient" onfocus="this.value=''">
+      <input type="number" class="amount" name="amount" onfocus="this.value=''">
+      <div id="append"></div>
+      <input for="ingredient" type="submit" value="Calculate">
       <datalist id="food">
         {{ ingredients }}
       </datalist>  
-      <div class="append"></div>
     </fieldset>
-    <button type="button" id="add">Add Ingredient</button><br>
-    <button type="button" id="remove">Remove Ingredient</button>
   </form>
+  <button onclick="add" id="add">Add Ingredient</button>
+  <button type="button" id="remove">Remove Ingredient</button>
 </div>
 {% endblock %}

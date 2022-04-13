@@ -1,11 +1,18 @@
 $(document).ready(function(){
-    $(document).on("click", "#add", function(){
-        $(".append").append("<input class=\"ingredient\" list=\"food\"> <input class=\"amount\" name=\"amount\"><br>")
+    n=1
+    $(document).on("click", "#add", function() {
+        $("#append").append("<input class=\"ingredient\" list=\"food\" onfocus=\"this.value=''\" id=\"ingredient" + n + "\"> <input type=\"number\" class=\"amount\" onfocus=\"this.value=''\" id=\"amount" + n + "\"></br>")
+        n++
     });
-    $(document).on("click", "#remove", function(){
-        $(".append").remove("<input class=\"ingredient\" list=\"food\"> <input class=\"amount\" name=\"amount\"><br>")
+    $(document).on("click", "#remove", function() {
+        $("#append").remove(".ingredient")
+        $("#append").remove(".amount")
     });
-    $(".ingredient").on("click", function() {
-        $("input[name=ingredient]").val("")
-    });
+    // function add() {
+    //     var add = document.getElementById("append")
+    //     const node = document.createElement("p");
+    //     const textnode = document.createTextNode("Water");
+    //     node.appendChild(textnode);
+    //     add.appendChild(node);
+    // }
 });
