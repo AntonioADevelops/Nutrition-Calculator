@@ -27,7 +27,6 @@ def render_lib():
 @app.route("/form")
 def render_input():
     uIng = request.args["ingredient"]
-    fat = ""
     for i in food:
         data = i['Description']
         if data == uIng:
@@ -51,9 +50,10 @@ def render_input():
             iron = round(i["Data"]["Major Minerals"]["Iron"]/14*100)
             cal = fat*9 + carbs*4 + protein*4
             calfat = fat*9
-        
+    
     return render_template(
-        "output.html", 
+        "output.html",
+        FoodName = uIng,
         Fat = fat, 
         FatDv = fatDv, 
         SatFat = satfat, 
@@ -75,6 +75,8 @@ def render_input():
         Calories = cal,
         FatCalories = calfat)
         
-    
+@app.route("/formcalc")
+def render_calc_input():
+    print("balls")
 if __name__=="__main__":
     app.run(debug=False)

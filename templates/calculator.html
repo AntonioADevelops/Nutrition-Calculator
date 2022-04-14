@@ -9,12 +9,12 @@
   <h1>Calculator</h1>
 </div>
 <div class="form">
-  <form action="/form" i ="formID">
+  <form action="/formcalc" id ="formID">
     <fieldset>
       <label for="ingredient">Select an Ingredient:</label>
       <label for="amount">&emsp;&emsp;&ensp;Select amount in Serving Size:</label><br>
       <input class="ingredient" list="food" name="ingredient" onfocus="this.value=''">
-      <input type="number" class="amount" name="amount" onfocus="this.value=''">
+      <input type="number" step=".01" min=0 class="amount" name="amount" onfocus="this.value=''">
       <div id="append"></div>
       <input for="ingredient" type="submit" value="Calculate">
       <datalist id="food">
