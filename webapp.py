@@ -77,7 +77,7 @@ def render_input():
         
 @app.route("/formcalc")
 def render_calc_input():
-    uIng = request.args["ingredients"]
+    uIng = request.args["ingredient"]
     uAmt = int(request.args["amount"])
     for i in food:
         data = i['Description']
