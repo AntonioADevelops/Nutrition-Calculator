@@ -8,7 +8,7 @@ with open("ingredients.json") as file:
     food = json.load(file)
     
 ingredients = ""
-for i in food:
+for i in food: 
     ing =  i['Description']
     ingredients += Markup('<option>') + ing + Markup('</option>')
     
@@ -77,6 +77,55 @@ def render_input():
         
 @app.route("/formcalc")
 def render_calc_input():
-    print("balls")
+    uIng = request.args["ingredients"]
+    uAmt = int(request.args["amount"])
+    for i in food:
+        data = i['Description']
+        if data == uIng:
+            fat = round(i["Data"]["Fat"]["Total Lipid"]*uAmt)
+            fatDv = round(fat/65*100)
+            satfat = round(i["Data"]["Fat"]["Saturated Fat"]*uAmt)
+            satfatDv = round(satfat/20*100)
+            chole = round(i["Data"]["Cholesterol"]*uAmt)
+            choleDv = round(chole/300*100)
+            sodium = round(i["Data"]["Major Minerals"]["Sodium"]*uAmt)
+            sodiumDv = round(sodium/2400*100)
+            carbs = round(i["Data"]["Carbohydrate"]*uAmt)
+            carbsDv = round(carbs/300*100)
+            fiber = round(i["Data"]["Fiber"]*uAmt)
+            fiberDv = round(fiber/25*100)
+            sugar = round(i["Data"]["Sugar Total"]*uAmt)
+            protein = round(i["Data"]["Protein"]*uAmt)
+            vitA = round(i["Data"]["Vitamins"]["Vitamin A - RAE"]*uAmt/1000*100)
+            vitC = round(i["Data"]["Vitamins"]["Vitamin C"]*uAmt/60*100)
+            calcium = round(i["Data"]["Major Minerals"]["Calcium"]*uAmt/1100*100)
+            iron = round(i["Data"]["Major Minerals"]["Iron"]*uAmt/14*100)
+            cal = fat*9 + carbs*4 + protein*4
+            calfat = fat*9
+            
+    return render_template(
+        "output.html",
+        FoodName = uIng,
+        Fat = fat, 
+        FatDv = fatDv, 
+        SatFat = satfat, 
+        SatFatDv = satfatDv, 
+        Chole = chole, 
+        CholeDv = choleDv, 
+        Sodium = sodium, 
+        SodiumDv = sodiumDv, 
+        Carbs = carbs, 
+        CarbsDv = carbsDv,
+        Fiber = fiber,
+        FiberDv = fiberDv,
+        Sugar = sugar,
+        Protein = protein,
+        VitA = vitA,
+        VitC = vitC,
+        Calcium = calcium,
+        Iron = iron,
+        Calories = cal,
+        FatCalories = calfat)
+    
 if __name__=="__main__":
     app.run(debug=False)
