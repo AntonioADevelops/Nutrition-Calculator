@@ -106,3 +106,10 @@ input[type="number"] {
   input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
   }
+
+#formID { 
+    text-align: center;
+}
+#buttons {
+    text-align: center;
+}

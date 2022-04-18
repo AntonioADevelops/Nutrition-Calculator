@@ -14,7 +14,7 @@
       <div id="append">
         <label for="ingredient">Select an Ingredient:</label>
         <label for="amount">&emsp;&emsp;&ensp;Select amount in Serving Size:</label><br>
-        <input class="ingredient" list="food" name="ingredient" onfocus="this.value=''">
+        <input class="ingredient" list="food" name="ingredient0" onfocus="this.value=''">
         <input type="number" step=".01" min=0 class="amount" name="amount" onfocus="this.value=''"><br>
       </div>
       <input for="ingredient" type="submit" value="Calculate">
@@ -23,7 +23,9 @@
       </datalist>  
     </fieldset>
   </form>
-  <button onclick="add" id="add">Add Ingredient</button>
-  <button type="button" id="remove">Remove Ingredient</button>
+  <div id="buttons">
+    <button onclick="add" id="add">Add Ingredient</button>
+    <button type="button" id="remove">Remove Ingredient</button>
+  </div>
 </div>
 {% endblock %}
