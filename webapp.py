@@ -81,7 +81,7 @@ def render_calc_input():
     for keys in request.args.keys():
         if keys != "amount":
             uIng.append(request.args[keys])
-            uAmt = float(request.args["amount"])
+    uAmt = float(request.args["amount"])
     sumfat = 0
     sumfatDv = 0
     sumsatfat = 0
@@ -108,19 +108,19 @@ def render_calc_input():
             fatDv = round(fat/65*100)
             sumfatDv = sumfatDv + fatDv
             satfat = round(i["Data"]["Fat"]["Saturated Fat"]*uAmt)
-            sumfatDv = sumfatDv + fatDv
+            sumsatfat = sumfatDv + fatDv
             satfatDv = round(satfat/20*100)
-            sumfatDv = sumfatDv + fatDv
+            sumsatfatDv = sumsatfatDv + satfatDv
             chole = round(i["Data"]["Cholesterol"]*uAmt)
-            sumfatDv = sumfatDv + fatDv
+            sumchole = sumchole + fatDv
             choleDv = round(chole/300*100)
-            sumfatDv = sumfatDv + fatDv
+            sumcholeDv = sumcholeDv + choleDv
             sodium = round(i["Data"]["Major Minerals"]["Sodium"]*uAmt)
-            sumfatDv = sumfatDv + fatDv
+            sumsodium= sumsodium + sodium
             sodiumDv = round(sodium/2400*100)
-            sumfatDv = sumfatDv + fatDv
+            sumsodiumDv= sumsodiumDv + sodiumDv
             carbs = round(i["Data"]["Carbohydrate"]*uAmt)
-            sumfatDv = sumfatDv + fatDv
+            sumcarbs = sumcarbs + carbs
             carbsDv = round(carbs/300*100)
             sumcarbsDv = sumcarbsDv + carbsDv
             fiber = round(i["Data"]["Fiber"]*uAmt)
@@ -139,8 +139,8 @@ def render_calc_input():
             sumcalcium = sumcalcium + calcium
             iron = round(i["Data"]["Major Minerals"]["Iron"]*uAmt/14*100)
             sumiron = sumiron + iron
-            cal = fat*9 + carbs*4 + protein*4
-            calfat = fat*9
+            cal = sumfat*9 + sumcarbs*4 + sumprotein*4
+            calfat = sumfat*9
             
     return render_template(
         "output.html",
